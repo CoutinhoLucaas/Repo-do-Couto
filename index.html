@@ -1,49 +1,95 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <link rel="stylesheet" href="styles.css" />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link
-    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-     rel="stylesheet"
-     />
-     <title>Verdãoflix</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Em Busca do Tesouro Perdido</title>
 </head>
-
 <body>
-    <header>Verdãoflix</header>
-
-    <section class="chamada">
-        <div class="chamada-texto">
-            <h1>Podcast com bombeiro - Trabalho Seide</h1>
-            <p>#Podcast  escolhida</p>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <header>Em Busca do Tesouro Perdido</header>
+            <img src="img/verdao.png" alt="Início da Jornada">
+            <p>É o seu primeiro dia numa nova escola integral, mas você sente que essa escola tem um segredo. Comece a explorá-la!</p>
+            <button class="btn-proximo" data-proximo="1">Sala de Leitura</button>
+            <button class="btn-proximo" data-proximo="2">Quadra</button>
+        </div>
+        <div class="passo" id="passo-1">
+            <img src="img/nair.png" alt="Sala de Leitura">
+            <p>Você entra numa biblioteca, e uma simpática professora vem e vocês conversam sobre um antigo tesouro mágico que a diretora escondeu. Ela deixou pistas escondidas pela escola.</p>
+            <button class="btn-proximo" data-proximo="3">Procurar a pista na sala de leitura</button>
+            <button class="btn-proximo" data-proximo="4">Procurar pista com a professora Kelly</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <img src="img/claudinha.png" alt="Em Quadra">
+            <p>Na quadra você assiste ao jogo entre dois times de vôlei não tão bons assim, mas você encontra uma simpática professora de Educação Física que comenta sobre um tesouro mágico que a diretora escondeu na escola. Talvez alguém saiba de alguma coisa.</p>
+            <button class="btn-proximo" data-proximo="5">Investigar a Estufa</button>
+            <button class="btn-proximo" data-proximo="6">Investigar o Guilherme</button>
         </div>
 
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ghu1bxRPQqY?si=zcosInHqw-fc8_69" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="passo" id="passo-3">
+            <img src="img/nair.png" alt="Biblioteca">
+            <p>Ao procurar na biblioteca, você encontra uma carta escrita pela professora de História onde ela diz "Está cada vez mais difícil esconder esse tesouro".</p>
+            <button class="btn-proximo" data-proximo="7">Investigar Mauriceia</button>
         </div>
-    </section>
 
-    <section class="categoria">
-        <h2>Filmes e séries</h2>
-        <div class="categoria-videos">
-          <a href="https://youtu.be/Ih7oOg2fFPM?si=zeEUbhJ93vrPCqW-">
-            <img src="https://img.youtube.com/vi/si=zeEUbhJ93vrPCqW/maxresdefault.jpg" />
-          </a>
-          <a href=" https://youtu.be/xBYdZDQdVEE?si=DkgVa8ZnuKDTn0uV">
-            <img src="https://img.youtube.com/vi/si=DkgVa8ZnuKDTn0uV/maxresdefault.jpg" />
-          </a>
-          <a href=" https://youtu.be/3wij_JBSlDs?si=8CIA4pxViEMXd5J- ">
-            <img src="https://img.youtube.com/vi/si=8CIA4pxViEMXd5J/maxresdefault.jpg" />
-          </a>
-          <a href=" https://youtu.be/pyYwwaUP8uk?si=U3EbvpZRgysnVBZl">
-            <img src="https://img.youtube.com/vi/?si=U3EbvpZRgysnVBZl/maxresdefault.jpg" />
-          </a>
-          <a href="https://youtu.be/W0Oi_KSLs9Y?si=iUUvLd3VclFZZCzF">
-            <img src="https://img.youtube.com/vi/si=iUUvLd3VclFZZCzF/maxresdefault.jpg" />
-          </a>
+        <div class="passo" id="passo-4">
+            <img src="img/kelly.png" alt="Kelly">
+            <p>Você conversa com a alegre professora de Português, mas quando você pergunta sobre algum tesouro, ela diz que não sabe nada sobre isso.</p>
         </div>
-      </section>
+
+        <div class="passo" id="passo-5">
+            <img src="img/guilherme.png" alt="Guilherme">
+            <p>Conversando com o divertido professor Guilherme, ele diz que é um professor novo na escola e que quem deve saber de algo é a professora de Química.</p>
+            <button class="btn-proximo" data-proximo="7">Conversar com Jojo</button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <img src="img/estufa.png" alt="Estufa">
+            <p>Explorando a estufa você encontra somente sementes, grama e ervas daninhas, mas nenhum segredo.</p>
+            <button class="btn-proximo" data-proximo="8">Voltar e Falar com Professor Gui</button>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <img src="img/mauriceia.png" alt="Mauricéia">
+            <p>Conversando com a agradável professora de História, ela diz que não sabe onde está o tesouro, mas sabe quem ajudou a escondê-lo.</p>
+            <button class="btn-proximo" data-proximo="9">Conversar com Seide</button>
+            <button class="btn-proximo" data-proximo="10">Conversar com Nelson</button>
+        </div>
+
+        <div class="passo" id="passo-8">
+            <img src="img/joelma.png" alt="Joelma">
+            <p>Você encontra a amigável professora de Química e ela te diz que apenas a professora Mauri sabe quem escondeu o tesouro!</p>
+            <button class="btn-proximo" data-proximo="7">Conversar com Mauriceia</button>
+        </div>
+
+        <div class="passo" id="passo-9">
+            <img src="img/seide.jpeg" alt="Seide">
+            <p>A gentil professora Seide revela que o tesouro foi guardado nas catacumbas da escola, vulgo o corredor da informática.</p>
+            <button class="btn-proximo" data-proximo="11">Explorar o Corredor</button>
+        </div>
+
+        <div class="passo" id="passo-10">
+            <img src="img/nelson.png" alt="Nelson">
+            <p>Conversando com Nelson, ele diz que jamais irá contar para você onde escondeu o tesouro. Ele está armado com um frasco de ácido sulfúrico ultra corrosivo. FUJA!</p>
+            <button class="btn-proximo" data-proximo="12">Retornar e Falar com Seide</button>
+        </div>
+
+        <div class="passo" id="passo-11">
+            <img src="img/atestadoo.jfif" alt="Corredor">
+            <p>Dentro do corredor da escola você encontra um tijolo solto, e ao mexer nele percebe que ele é uma caixa disfarçada. Ao abrir, você encontra um tesouro mágico e poderoso para qualquer aluno do ensino médio: um atestado de 40 dias mais o gabarito de todas as provas da escola.</p>
+        </div>
+
+        <div class="passo" id="passo-12">
+            <img src="img/seide.jpeg" alt="Bifurcação">
+            <p>A gentil professora Seide revela que o tesouro foi guardado nas catacumbas da escola, vulgo o corredor da informática.</p>
+            <button class="btn-proximo" data-proximo="11">Explorar o Corredor</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
-
 </html>
